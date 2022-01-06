@@ -1,6 +1,6 @@
 # Introduction to ASP.NET Core
-#### History
-MS Craeted .NET Framework => 2001
+### History
+MS Created .NET Framework => 2001
 1,1.1,2,3,3.5,4,4.5, 4.6, 4.7, 4.8
 Windows centric =>
 2009 => MVC 1.0 in .NET Framework
@@ -40,6 +40,7 @@ Response => HTML, CSS, JS => ALL UI Elements (Buttons, Dropdowns, Radio BUttons,
 3. POST => http://www.example.com/employee/create => Submitting 
 Controller is a C# class in MVC but it derives from Controller class
 
+```csharp
 public class EmployeeController: Controller
  {
      [HttpGet]
@@ -48,7 +49,6 @@ public class EmployeeController: Controller
           //  go to database and get employee details by id
           Employee employee = new EmployeeService().GetDetails(id);
          // return a view
-
          return View(employee);
      }
 
@@ -66,7 +66,7 @@ public class EmployeeController: Controller
          return View();
      } 
  }
-
+```
 
 #### Onion/Clean/Layered Architecture
 
