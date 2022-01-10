@@ -1,8 +1,12 @@
+using ApplicationCore.Contracts.Services;
+using Infrastructure.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IMovieService, MovieMockService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
